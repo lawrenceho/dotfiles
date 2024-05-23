@@ -7,3 +7,6 @@ vim.g.autoformat = false
 
 -- Sync with system clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Number of spaces tabs count for
+vim.opt.tabstop = 8
