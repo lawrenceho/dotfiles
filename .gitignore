@@ -20,7 +20,7 @@
 .local/**
 
 # Git
-.config/git/**
+.config/git/
 
 # SSH
 .ssh/**
