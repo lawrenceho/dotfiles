@@ -26,7 +26,7 @@
 .ssh/
 
 # Docker
-.docker/
+.docker/**
 !.docker/config.json
 
 # Maven
