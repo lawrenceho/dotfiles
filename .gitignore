@@ -1,0 +1,32 @@
+# All directories and files not beginning with a dot
+[!.]*
+
+# Include all directories and files inside dot directories
+!.*/**
+
+# Include license
+!/LICENSE
+
+# History files
+/*_history
+
+# Dotfiles bare repo
+.dotfiles/**
+
+# XDG user-specific non-essential data files
+.cache/**
+
+# XDG user-specific data and state files
+.local/**
+
+# Git
+.config/git/**
+
+# SSH
+.ssh/**
+
+# Docker
+.docker/**
+
+# Maven
+.m2/**
