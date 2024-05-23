@@ -4,6 +4,7 @@ return {
     opts = {
       jdtls = function(opts)
         table.insert(opts.cmd, "--jvm-arg=-Djava.import.generatesMetadataFilesAtProjectRoot=false")
+        -- https://github.com/LazyVim/LazyVim/discussions/2793
         opts.root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" })
         opts.settings = {
           java = {
