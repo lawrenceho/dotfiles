@@ -2,7 +2,7 @@
 HISTCONTROL=ignoreboth
 
 # Append history after each command
-PROMPT_COMMAND='history -a'
+PROMPT_COMMAND="${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}history -a"
 
 # Append history upon shell exit
 shopt -s histappend
