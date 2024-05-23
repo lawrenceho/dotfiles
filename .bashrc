@@ -8,6 +8,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Manage SSH agent with keychain
+mkdir -p "$HOME"/.local/state/keychain
 eval "$(keychain --agents ssh --dir "$HOME"/.local/state/keychain --absolute --eval --quiet)"
 
 # Alias for dotfiles management
