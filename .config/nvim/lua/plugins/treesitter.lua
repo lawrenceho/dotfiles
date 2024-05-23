@@ -9,6 +9,7 @@ return {
         "regex",
         "tmux",
         "vim",
+        "xml",
       },
     },
   },
