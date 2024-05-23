@@ -5,11 +5,10 @@ return {
       ensure_installed = {
         "bash",
         "beancount",
-        "java",
         "lua",
-        "markdown",
-        "markdown_inline",
+        "regex",
         "tmux",
+        "vim",
       },
     },
   },
