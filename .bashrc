@@ -1,7 +1,10 @@
-# Ignore duplicates and lines beginning with a space
+# Ignore duplicates and lines beginning with a space in history
 HISTCONTROL=ignoreboth
 
-# Append history
+# Append history after each command
+PROMPT_COMMAND='history -a'
+
+# Append history upon shell exit
 shopt -s histappend
 
 # Check window size after each external (non-builtin) command
