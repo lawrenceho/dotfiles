@@ -11,13 +11,13 @@
 /*_history
 
 # Dotfiles bare repo
-.dotfiles/**
+.dotfiles/
 
 # XDG user-specific non-essential data files
-.cache/**
+.cache/
 
 # XDG user-specific data and state files
-.local/**
+.local/
 
 # Git
 .config/git/
@@ -26,8 +26,8 @@
 .ssh/
 
 # Docker
-.docker/**
+.docker/
 !.docker/config.json
 
 # Maven
-.m2/**
+.m2/
