@@ -11,8 +11,14 @@ shopt -s checkwinsize
 mkdir -p "$HOME"/.local/state/keychain
 eval "$(keychain --agents ssh --dir "$HOME"/.local/state/keychain --absolute --eval --quiet)"
 
-# Alias for dotfiles management
-alias config='git --git-dir="$HOME"/.dotfiles --work-tree="$HOME"'
+# Enable dotfiles management with custom function
+git() {
+  if [ "$PWD" = "$HOME" ]; then
+    command git --git-dir="$HOME"/.dotfiles --work-tree="$HOME" "$@"
+  else
+    command git "$@"
+  fi
+}
 
 # Options for less
 export LESS='-iFRX'
