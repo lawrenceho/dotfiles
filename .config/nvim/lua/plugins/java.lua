@@ -13,6 +13,11 @@ return {
                 enabled = false,
               },
             },
+            inlayHints = {
+              parameterNames = {
+                enabled = "all",
+              },
+            },
             completion = {
               importOrder = {
                 "",
@@ -29,7 +34,7 @@ return {
             },
           },
         }
-        opts.on_attach = function()
+        opts.on_attach = function(args)
           -- DAP configuration
           require("dap").configurations.java = {
             {
@@ -40,6 +45,22 @@ return {
               port = 5005,
             },
           }
+
+          -- Register the gd keymap and toggle inlay hints
+          -- because the supports_method function may return false
+          -- when jdtls is not fully loaded in Neovim 0.10
+          require("which-key").register({
+            ["gd"] = {
+              function()
+                require("telescope.builtin").lsp_definitions({ reuse_win = true })
+              end,
+              "Goto Definition",
+            },
+          }, { mode = "n", buffer = args.buf })
+
+          if vim.fn.has("nvim-0.10") == 1 then
+            LazyVim.toggle.inlay_hints(args.buf, true)
+          end
         end
       end,
     },
