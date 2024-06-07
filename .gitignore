@@ -17,7 +17,8 @@
 .cache/
 
 # XDG user-specific data and state files
-.local/
+.local/share/
+.local/state/
 
 # Git
 .config/git/

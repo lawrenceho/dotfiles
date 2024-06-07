@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. "$HOME"/.config/restic/rest-server-repo
+restic backup "$HOME" --exclude-file "$HOME"/.config/restic/excludes "$@"
