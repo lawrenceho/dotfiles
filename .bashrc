@@ -10,15 +10,26 @@ shopt -s histappend
 # Check window size after each external (non-builtin) command
 shopt -s checkwinsize
 
-# Manage SSH agent with keychain
-mkdir -p "$HOME"/.local/state/keychain
-eval "$(keychain --agents ssh --dir "$HOME"/.local/state/keychain \
-  --absolute --eval --quiet)"
+# User specific environment
+if [ -d "$HOME"/.local/bin ]; then
+  export PATH="$HOME"/.local/bin:"$PATH"
+fi
 
-# Options for less
+# GnuPG home
+export GNUPGHOME="$HOME"/.local/share/gnupg
+
+# Manage GnuPG and SSH agent with keychain
+mkdir -p "$HOME"/.local/state/keychain
+eval "$(keychain --agents gpg,ssh --dir "$HOME"/.local/state/keychain \
+  --absolute --eval --quiet restic@localhost)"
+
+# Password storage
+export PASSWORD_STORE_DIR="$HOME"/.local/share/pass
+
+# less options
 export LESS='-iFRX'
 
-# Location for npm config
+# npm per-user configuration file
 export NPM_CONFIG_USERCONFIG="$HOME"/.config/npm/npmrc
 
 # Prompt

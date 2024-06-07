@@ -1,0 +1,17 @@
+# XDG user-specific non-essential data files
+$HOME/.cache
+
+# Docker
+$HOME/.docker/*
+!$HOME/.docker/config.json
+
+# Neovim
+$HOME/.local/share/nvim/lazy
+$HOME/.local/share/nvim/mason
+
+# Keychain
+$HOME/.local/state/keychain
+
+# Maven
+$HOME/.m2
+$HOME/**/target

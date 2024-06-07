@@ -1,0 +1,3 @@
+export RESTIC_COMPRESSION='max'
+export RESTIC_PASSWORD_COMMAND='pass restic/rest-server-repo'
+export RESTIC_REPOSITORY='rest:http://host.docker.internal:8000/'
