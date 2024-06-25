@@ -6,10 +6,5 @@
 vim.keymap.del({ "n", "x", "o" }, "n")
 vim.keymap.del({ "n", "x", "o" }, "N")
 
--- Disable lazygit keymaps
+-- Disable Git Browse keymap
 vim.keymap.del("n", "<leader>gB")
-vim.keymap.del("n", "<leader>gb")
-vim.keymap.del("n", "<leader>gf")
-vim.keymap.del("n", "<leader>gG")
-vim.keymap.del("n", "<leader>gL")
-vim.keymap.del("n", "<leader>gl")
