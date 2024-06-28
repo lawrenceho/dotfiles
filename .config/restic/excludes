@@ -16,5 +16,8 @@ $HOME/.local/state/keychain
 $HOME/.m2
 $HOME/**/target
 
+# Node
+$HOME/**/node_modules
+
 # Virtual environment
 $HOME/**/.venv
