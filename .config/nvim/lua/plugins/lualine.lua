@@ -28,14 +28,7 @@ return {
           { "progress", separator = " ", padding = { left = 1, right = 1 } },
         },
         lualine_z = {
-          {
-            -- Fix "location"
-            -- https://github.com/nvim-lualine/lualine.nvim/pull/1243
-            function()
-              return string.format("%3d:%-2d", vim.fn.line("."), vim.fn.charcol("."))
-            end,
-            padding = { left = 1, right = 1 },
-          },
+          { "location", padding = { left = 1, right = 1 } },
         },
       },
     },
