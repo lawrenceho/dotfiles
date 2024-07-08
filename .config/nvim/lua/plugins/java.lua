@@ -34,7 +34,9 @@ return {
             },
           },
         }
-        opts.on_attach = function()
+        opts.on_attach = function(args)
+          -- Enable inlay hints
+          LazyVim.toggle.inlay_hints(args.buf, true)
           -- DAP configuration
           require("dap").configurations.java = {
             {
