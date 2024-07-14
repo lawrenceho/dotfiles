@@ -1,5 +1,5 @@
 {
-  "LazyVim": { "branch": "main", "commit": "45af7e1fed5273b027105ecf4026e4c452cc7508" },
+  "LazyVim": { "branch": "main", "commit": "b20be638b3563cce0823b161a909f7702aaa64b5" },
   "bufferline.nvim": { "branch": "main", "commit": "aa16dafdc642594c7ade7e88d31a6119feb189d6" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
@@ -44,5 +44,5 @@
   "tokyonight.nvim": { "branch": "main", "commit": "b357de8d1d8d0d90be0d7f7750c7aa7eb7f4b020" },
   "trouble.nvim": { "branch": "main", "commit": "03c1fbf518bef683422a3be9643c3da190903488" },
   "ts-comments.nvim": { "branch": "main", "commit": "8504d06d4f02e7ca6e65c635cef881cefba573d5" },
-  "which-key.nvim": { "branch": "main", "commit": "4d5b8959fd2a4df065ff76ccb39019aaa70cb0dc" }
+  "which-key.nvim": { "branch": "main", "commit": "2e4f7afa4aa444483d8ade5989d524c7f4131368" }
 }
