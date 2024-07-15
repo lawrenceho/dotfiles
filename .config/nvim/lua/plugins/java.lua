@@ -35,8 +35,10 @@ return {
           },
         }
         opts.on_attach = function(args)
-          -- Enable inlay hints
-          LazyVim.toggle.inlay_hints(args.buf, true)
+          -- Inlay hints
+          if LazyVim.opts("nvim-lspconfig").inlay_hints.enabled then
+            vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+          end
           -- DAP configuration
           require("dap").configurations.java = {
             {
