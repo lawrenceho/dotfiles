@@ -39,16 +39,6 @@ return {
           if LazyVim.opts("nvim-lspconfig").inlay_hints.enabled then
             vim.lsp.inlay_hint.enable(true)
           end
-          -- DAP configuration
-          require("dap").configurations.java = {
-            {
-              type = "java",
-              request = "attach",
-              name = "Debug (Attach) - Remote",
-              hostName = "localhost",
-              port = 5005,
-            },
-          }
         end
       end,
     },
