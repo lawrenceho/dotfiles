@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     vim.opt_local.filetype = "yaml.docker-compose"
   end,
 })
+
+-- Disable diagnostics for env files
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  group = vim.api.nvim_create_augroup("env_disable_diagnostic", {}),
+  pattern = ".env*",
+  callback = function(args)
+    vim.diagnostic.enable(false, { bufnr = args.buf })
+  end,
+})
