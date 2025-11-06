@@ -32,3 +32,14 @@
 
 # Maven
 .m2/
+
+# Authority files
+.ICEauthority
+.Xauthority
+
+# Xfce
+.config/Thunar/
+.config/autostart/
+.config/dconf/
+.config/xfce4/
+.config/user-dirs.*
