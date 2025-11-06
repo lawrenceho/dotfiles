@@ -5,12 +5,12 @@ $HOME/.cache
 $HOME/.docker/*
 !$HOME/.docker/config.json
 
+# GnuPG
+$HOME/.local/share/gnupg/public-keys.d
+
 # Neovim
 $HOME/.local/share/nvim/lazy
 $HOME/.local/share/nvim/mason
-
-# Keychain
-$HOME/.local/state/keychain
 
 # Maven
 $HOME/.m2
@@ -21,3 +21,13 @@ $HOME/**/node_modules
 
 # Virtual environment
 $HOME/**/.venv
+
+# TigerVNC
+$HOME/.local/state/tigervnc/
+
+# Authority files
+$HOME/.ICEauthority
+$HOME/.Xauthority
+
+# mise
+$HOME/.local/share/mise
