@@ -15,14 +15,6 @@ if [ -d "$HOME"/.local/bin ]; then
   export PATH="$HOME"/.local/bin:"$PATH"
 fi
 
-# GnuPG home
-export GNUPGHOME="$HOME"/.local/share/gnupg
-
-# Manage GnuPG and SSH agent with keychain
-mkdir -p "$HOME"/.local/state/keychain
-eval "$(keychain --agents gpg,ssh --dir "$HOME"/.local/state/keychain \
-  --absolute --eval --quiet restic@localhost)"
-
 # Default editor
 export EDITOR='nvim'
 
@@ -54,6 +46,13 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # fzf key bindings and fuzzy completion
 FZF_ALT_C_COMMAND='' eval "$(fzf --bash)"
 
+# SSH agent
+SSH_AUTH_SOCK=/run/user/"$(id -u)"/ssh-agent.socket
+export SSH_AUTH_SOCK
+
+# GnuPG home
+export GNUPGHOME="$HOME"/.local/share/gnupg
+
 # Password storage
 export PASSWORD_STORE_DIR="$HOME"/.local/share/pass
 
@@ -65,6 +64,12 @@ export NPM_CONFIG_USERCONFIG="$HOME"/.config/npm/npmrc
 
 # Restic
 . "$HOME"/.config/restic/default-repo
+
+# mise
+eval "$(mise activate bash)"
+
+# X
+export DISPLAY=:0
 
 # Prompt
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
