@@ -1,0 +1,5 @@
+[tools]
+java = "zulu-21"
+lazygit = "latest"
+node = "latest"
+usage = "latest"
