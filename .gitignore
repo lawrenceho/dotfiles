@@ -17,8 +17,11 @@
 .cache/
 
 # XDG user-specific data and state files
-.local/share/
-.local/state/
+.local/share/*
+.local/state/*
+
+# D-Bus
+!.local/share/dbus-1/
 
 # Git
 .config/git/
@@ -27,7 +30,7 @@
 .ssh/
 
 # Docker
-.docker/**
+.docker/*
 !.docker/config.json
 
 # Maven
