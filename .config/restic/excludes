@@ -6,7 +6,7 @@ $HOME/.docker/*
 !$HOME/.docker/config.json
 
 # GnuPG
-$HOME/.local/share/gnupg/public-keys.d
+$HOME/.local/share/gnupg/public-keys.d/.*
 
 # Neovim
 $HOME/.local/share/nvim/lazy
