@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # Ignore duplicates and lines beginning with a space in history
 HISTCONTROL=ignoreboth
 
