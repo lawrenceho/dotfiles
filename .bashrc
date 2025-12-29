@@ -18,9 +18,6 @@ if [ -d "$HOME"/.local/bin ]; then
   export PATH="$HOME"/.local/bin:"$PATH"
 fi
 
-# Default editor
-export EDITOR='nvim'
-
 # fzf options
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
@@ -52,9 +49,6 @@ FZF_ALT_C_COMMAND='' eval "$(fzf --bash)"
 # SSH agent
 SSH_AUTH_SOCK=/run/user/"$(id -u)"/ssh-agent.socket
 export SSH_AUTH_SOCK
-
-# GnuPG home
-export GNUPGHOME="$HOME"/.local/share/gnupg
 
 # Password storage
 export PASSWORD_STORE_DIR="$HOME"/.local/share/pass
