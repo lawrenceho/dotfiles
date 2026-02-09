@@ -23,6 +23,9 @@
 # D-Bus
 !.local/share/dbus-1/
 
+# GitHub
+.config/gh/hosts.yml
+
 # Git
 .config/git/
 
