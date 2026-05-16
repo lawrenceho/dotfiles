@@ -18,6 +18,9 @@ if [ -d "$HOME"/.local/bin ]; then
   export PATH="$HOME"/.local/bin:"$PATH"
 fi
 
+# Default editor
+export EDITOR='nvim'
+
 # fzf options
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
