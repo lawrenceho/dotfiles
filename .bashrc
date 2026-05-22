@@ -19,7 +19,7 @@ if [ -d "$HOME"/.local/bin ]; then
 fi
 
 # Default editor
-export EDITOR='nvim'
+export EDITOR='vi'
 
 # fzf options
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -59,17 +59,14 @@ export PASSWORD_STORE_DIR="$HOME"/.local/share/pass
 # less options
 export LESS='-iFRX'
 
-# npm per-user configuration file
-export NPM_CONFIG_USERCONFIG="$HOME"/.config/npm/npmrc
-
 # Restic
 . "$HOME"/.config/restic/default-repo
 
+# Cargo
+. "$HOME/.cargo/env"
+
 # mise
 eval "$(mise activate bash)"
-
-# X
-export DISPLAY=:0
 
 # Prompt
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
