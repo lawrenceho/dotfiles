@@ -39,14 +39,6 @@
 # Maven
 .m2/
 
-# Authority files
-.ICEauthority
-.Xauthority
-
-# Xfce
-.config/Thunar/
-.config/autostart/
-.config/dconf/
-.config/gtk-3.0/
-.config/xfce4/
-.config/user-dirs.*
+# Rust
+.cargo/
+.rustup/
