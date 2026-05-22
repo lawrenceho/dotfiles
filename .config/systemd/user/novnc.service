@@ -1,9 +1,0 @@
-[Unit]
-Description=noVNC proxy
-
-[Service]
-ExecStart=/usr/bin/novnc_proxy
-Type=simple
-
-[Install]
-WantedBy=default.target
