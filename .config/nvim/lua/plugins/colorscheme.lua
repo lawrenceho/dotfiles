@@ -6,4 +6,8 @@ return {
       lualine_bold = true,
     },
   },
+  {
+    "catppuccin/nvim",
+    enabled = false,
+  },
 }

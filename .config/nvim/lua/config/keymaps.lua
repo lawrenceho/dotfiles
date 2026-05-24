@@ -5,6 +5,3 @@
 -- Restore keymaps for next search result
 vim.keymap.del({ "n", "x", "o" }, "n")
 vim.keymap.del({ "n", "x", "o" }, "N")
-
--- Disable Git Browse keymap
-vim.keymap.del("n", "<leader>gB")
