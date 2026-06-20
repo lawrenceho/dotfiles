@@ -21,7 +21,7 @@ fi
 # Default editor
 export EDITOR='vi'
 
-# git with bare .dotfiles support
+# git with bare dotfiles repository support
 git() {
   if [ "$PWD" = "$HOME" ]; then
     command git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
@@ -30,7 +30,7 @@ git() {
   fi
 }
 
-# lazygit with bare .dotfiles support
+# lazygit with bare dotfiles repository support
 lazygit() {
   if [ "$PWD" = "$HOME" ]; then
     command lazygit --git-dir "$HOME/.dotfiles" --work-tree "$HOME" "$@"
