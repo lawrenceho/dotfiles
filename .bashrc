@@ -14,12 +14,30 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # User specific environment
-if [ -d "$HOME"/.local/bin ]; then
-  export PATH="$HOME"/.local/bin:"$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin":"$PATH"
 fi
 
 # Default editor
 export EDITOR='vi'
+
+# git with bare .dotfiles support
+git() {
+  if [ "$PWD" = "$HOME" ]; then
+    command git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
+  else
+    command git "$@"
+  fi
+}
+
+# lazygit with bare .dotfiles support
+lazygit() {
+  if [ "$PWD" = "$HOME" ]; then
+    command lazygit -g "$HOME/.dotfiles" -w "$HOME" "$@"
+  else
+    command lazygit "$@"
+  fi
+}
 
 # fzf options
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -50,20 +68,24 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 FZF_ALT_C_COMMAND='' eval "$(fzf --bash)"
 
 # SSH agent
-SSH_AUTH_SOCK=/run/user/"$(id -u)"/ssh-agent.socket
+SSH_AUTH_SOCK="/run/user/$(id -u)/ssh-agent.socket"
 export SSH_AUTH_SOCK
 
 # Password storage
-export PASSWORD_STORE_DIR="$HOME"/.local/share/pass
+export PASSWORD_STORE_DIR="$HOME/.local/share/pass"
 
 # less options
 export LESS='-iFRX'
 
 # Restic
-. "$HOME"/.config/restic/default-repo
+if [ -f "$HOME/.config/restic/default-repo" ]; then
+  . "$HOME/.config/restic/default-repo"
+fi
 
 # Cargo
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
 
 # mise
 eval "$(mise activate bash)"
