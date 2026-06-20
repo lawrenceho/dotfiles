@@ -33,7 +33,7 @@ git() {
 # lazygit with bare .dotfiles support
 lazygit() {
   if [ "$PWD" = "$HOME" ]; then
-    command lazygit -g "$HOME/.dotfiles" -w "$HOME" "$@"
+    command lazygit --git-dir "$HOME/.dotfiles" --work-tree "$HOME" "$@"
   else
     command lazygit "$@"
   fi
