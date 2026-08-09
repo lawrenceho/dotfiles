@@ -7,7 +7,6 @@ return {
         "beancount",
         "lua",
         "regex",
-        "tmux",
         "vim",
         "xml",
       },
