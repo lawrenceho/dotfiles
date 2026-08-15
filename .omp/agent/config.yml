@@ -1,0 +1,15 @@
+modelRoles:
+  default: fireworks/deepseek-v4-flash-0731:high
+  advisor: fireworks/deepseek-v4-flash-0731:max
+symbolPreset: nerd
+theme:
+  dark: titanium
+setupVersion: 1
+secrets:
+  enabled: true
+startup:
+  checkUpdate: false
+advisor:
+  enabled: true
+  syncBacklog: "1"
+  immuneTurns: 0
