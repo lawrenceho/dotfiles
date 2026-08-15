@@ -1,2 +1,4 @@
 [tools]
+"github:zk-org/zk" = "latest"
 lazygit = "latest"
+oh-my-pi = { version = "latest", rename_exe = "omp" }
