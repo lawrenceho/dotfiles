@@ -39,6 +39,8 @@
 # Maven
 .m2/
 
-# Rust
-.cargo/
-.rustup/
+# omp
+.omp/*
+!.omp/agent/
+.omp/agent/*
+!.omp/agent/config.yml
