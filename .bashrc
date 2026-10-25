@@ -82,11 +82,6 @@ if [ -f "$HOME/.config/restic/default-repo" ]; then
   . "$HOME/.config/restic/default-repo"
 fi
 
-# Cargo
-if [ -f "$HOME/.cargo/env" ]; then
-  . "$HOME/.cargo/env"
-fi
-
 # mise
 eval "$(mise activate bash)"
 
