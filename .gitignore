@@ -39,8 +39,8 @@
 # Maven
 .m2/
 
-# omp
-.omp/*
-!.omp/agent/
-.omp/agent/*
-!.omp/agent/config.yml
+# pi
+.pi/*
+!.pi/agent/
+.pi/agent/*
+!.pi/agent/settings.json
