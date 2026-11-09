@@ -44,3 +44,9 @@
 !.pi/agent/
 .pi/agent/*
 !.pi/agent/settings.json
+
+# bun
+.bun/
+
+# npm
+.npm/
