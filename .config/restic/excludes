@@ -25,5 +25,11 @@ $HOME/.local/share/mise
 # gh
 $HOME/.local/state/gh
 
-# omp
-$HOME/.omp/natives
+# pi
+$HOME/.pi/agent/npm
+
+# bun
+$HOME/.bun
+
+# npm
+$HOME/.npm
